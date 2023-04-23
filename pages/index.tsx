@@ -45,9 +45,9 @@ export default function Home({ articles }: Props) {
 export const getStaticProps = async () => {
   let articles: Post[] = [];
   const res = await fetch(`${server}/api/articles`);
-  articles = await res.json();
+  articles = await res.json()
+;
   // console.log(articles)
-
   return {
     props: {
       articles,
